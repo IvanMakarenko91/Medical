@@ -238,3 +238,39 @@ main button {
     padding: 10px 0px;
   }
 }
+
+
+/* Offres */
+
+#offres {
+  position: relative;
+  background-color: #7fd1cc;
+}
+
+.info-offres {
+  width: 400px;
+  height: 300px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.info-offres img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+#offres button {
+  padding: 10px 60px;
+  border: none;
+  color: white;
+  background-color: #26aba3;
+  border-radius: 30px;
+}
+
+@media (max-width:499px) {
+  .info-offres {
+    width: 90%;
+    height: 100%;
+  }
+}
