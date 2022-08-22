@@ -1,4 +1,9 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* font-family: 'Bebas Neue', cursive; */
+
+* {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
@@ -6,6 +11,38 @@
 }
 body {
 position: relative;
+}
+
+.centrer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centrer-aligner {
+  display: flex;
+  align-items: center;
+}
+
+.aligner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.aligner-centrer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.bebas {
+  font-family: 'Bebas Neue', cursive;
 }
 
 /* Navbar */
@@ -99,6 +136,7 @@ header .menu {
   flex-direction: column;
   left: -500px;
   transition: 0.5s;
+  z-index: 2;
 }
 header .menu li {
   margin: 25px 0;
@@ -153,6 +191,7 @@ header .menu.responsive {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  z-index: 2;
 }
 }
 
@@ -162,5 +201,40 @@ header .menu.responsive {
   }
   header .menu.responsive {
     width: 100%;
+  }
+}
+
+
+/* Main */
+main {
+  min-height: 80vh;
+  width: 100%;
+  position: relative;
+}
+
+main img {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  border: 20px solid rgb(211, 151, 23);
+}
+
+main button {
+  padding: 10px 60px;
+  width: 225px;
+  border: none;
+  color: white;
+  background-color: #26aba3;
+  border-radius: 30px;
+}
+
+@media (max-width:499px) {
+  main img {
+    width: 265px;
+    height: 265px;
+  }
+  main button {
+    width: 100%;
+    padding: 10px 0px;
   }
 }
