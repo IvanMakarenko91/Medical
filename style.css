@@ -8,6 +8,7 @@
   padding: 0;
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
+  list-style: none;
 }
 body {
 position: relative;
@@ -236,7 +237,6 @@ main button {
     height: 265px;
   }
   main button {
-    width: 100%;
     padding: 10px 0px;
   }
 }
@@ -263,7 +263,8 @@ main button {
 }
 
 #offres button {
-  padding: 10px 60px;
+  padding: 10px 0px;
+  width: 225px;
   border: none;
   color: white;
   background-color: #26aba3;
@@ -291,7 +292,7 @@ main button {
 }
 
 #conseils button {
-  padding: 10px 60px;
+  padding: 10px 0px;
   width: 225px;
   border: none;
   color: white;
@@ -305,7 +306,79 @@ main button {
     height: 265px;
   }
   #conseils button {
-    width: 100%;
     padding: 10px 0px;
   }
 }
+
+
+/* Tarifs */
+
+#tarifs {
+  min-height: 60vh;
+  position: relative;
+  background-color: #7fd1cc;
+}
+
+.choix {
+  position: relative;
+  background-color: white;
+}
+
+#tarifs ul {
+  padding-left: 0px;
+}
+
+#tarifs ul li {
+  font-family: 'Roboto', sans-serif;
+}
+
+.choix .yes {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.choix .yes i {
+  color: #e7ac52;
+}
+
+.choix .no {
+  color: #00000050;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.choix h3 {
+  font-size: 30px;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 600;
+}
+
+.choix p {
+  font-size: 3rem;
+  color: #26aba3;
+}
+
+#tarifs button {
+  width: 150px;
+  padding: 8px 15px;
+  border: none;
+  background-color: #26aba3;
+  border-radius: 20px;
+  font-size: 18px;
+  transition: all 0.5s;
+}
+
+#tarifs button a {
+  text-decoration: none;
+  color: white;
+}
+
+#tarifs button:hover {
+  background-color: #e7ac52;
+}
+
+#tarifs .centrer-row {
+  display: flex;
+  justify-content: center;
+} 
