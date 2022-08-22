@@ -66,6 +66,7 @@ margin-right: 5px;
 header h1 {
 display: flex;
 align-items: center;
+font-family: 'Bebas Neue', cursive;
 }
 header .menu {
   display: flex;
@@ -78,9 +79,10 @@ header .menu li {
 header .menu li a {
   color: rgb(219, 219, 219);
   text-decoration: none;
-  font-size: 17px;
+  font-size: 21px;
   position: relative;
   transition: 0.5s;
+  font-family: 'Bebas Neue', cursive;
 }
 header .menu li a:hover {
   color: white;
@@ -272,5 +274,38 @@ main button {
   .info-offres {
     width: 90%;
     height: 100%;
+  }
+}
+
+/* Conseils */
+#conseils {
+  min-height: 80vh;
+  width: 100%;
+  position: relative;
+}
+
+#conseils img {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+}
+
+#conseils button {
+  padding: 10px 60px;
+  width: 225px;
+  border: none;
+  color: white;
+  background-color: #26aba3;
+  border-radius: 30px;
+}
+
+@media (max-width:499px) {
+  #conseils img {
+    width: 265px;
+    height: 265px;
+  }
+  #conseils button {
+    width: 100%;
+    padding: 10px 0px;
   }
 }
