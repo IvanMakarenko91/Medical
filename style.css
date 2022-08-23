@@ -528,3 +528,76 @@ main button {
     height: 630px;
   }
 }
+
+
+/* Footer */
+footer {
+  min-height: 30vh;
+  padding: 50px 50px 20px 50px;
+  text-align: center;
+}
+footer h2 {
+  font-family: 'Bebas Neue', cursive;
+  color: #1692ab;
+}
+footer p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+}
+.reseau {
+  padding-left: 10px;
+}
+
+.reseau a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: #1692ab;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 40px;
+  color: rgb(255, 255, 255);
+  transition: all 0.5 ease;
+}
+.reseau a:hover{
+  color: #1692ab;
+  background-color: #e7ac52;
+}
+
+footer img {
+  width: 30px;
+  height: 30px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+footer ul li {
+  color: #000000;
+}
+footer ul li a{
+  margin: 0px 10px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 25px;
+  cursor: pointer;
+}
+footer ul li:hover {
+  color: #e7ac52;
+}
+footer ul li a:hover {
+  background-color: #1692ab;
+}
+
+footer .copyright {
+  border-top: 1px solid black;
+}
+
+@media (max-width:578px) {
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
