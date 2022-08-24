@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* font-family: 'Bebas Neue', cursive; */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  list-style: none;
+  transition: all 0.5s;
+}
+body {
+position: relative;
+}
+
+.centrer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centrer-aligner {
+  display: flex;
+  align-items: center;
+}
+
+.aligner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.aligner-centrer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.bebas {
+  font-family: 'Bebas Neue', cursive;
+}
+
+#principale {
+  background: linear-gradient(180deg, #bbe2e0,5%, rgb(255, 255, 255));
+}
+
+/* Navbar */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 9%;
+  height: 80px;
+  /* background-color: rgb(88, 88, 88); */
+}
+header .logo {
+  color: black;
+  display: flex;
+}
+header .logo img {
+height: 60px;
+width: 60px;
+margin-right: 5px;
+}
+header h1 {
+display: flex;
+align-items: center;
+font-family: 'Bebas Neue', cursive;
+}
+header .menu {
+  display: flex;
+  margin: 0;
+}
+header .menu li {
+  margin: 0 15px;
+  list-style: none;
+}
+header .menu li a {
+  color: black;
+  text-decoration: none;
+  font-size: 21px;
+  position: relative;
+  font-family: 'Bebas Neue', cursive;
+}
+header .menu li a:hover {
+  color: #26aba3;
+}
+header .menu li a::before {
+  position: absolute;
+  bottom: -15px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #26aba3;
+  box-shadow: 15px 0px 0 #26aba3;
+  opacity: 0;
+}
+header .menu li a::after {
+  position: absolute;
+  bottom: -15px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: -15px 0px 0 #26aba3;
+  opacity: 0;
+}
+header .menu li a:hover::before, header .menu li a:hover::after {
+  opacity: 1;
+}
+
+/* Responsive Navbar */
+
+@media (max-width:1100px) {
+header {
+    padding: 0 5%;
+}
+header .menu {
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 80px;
+  background-color: #ffffff;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  left: -500px;
+  z-index: 2;
+}
+header .menu li {
+  margin: 25px 0;
+}
+.toggle-menu {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+    border: 1px solid #26aba3;
+}
+.toggle-menu::before{
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 25px;
+    background-color: #26aba3;
+    box-shadow: 0px 10px 0 #26aba3;
+    transform: translateY(-10px);
+    transition: all 0.5s;
+}
+.toggle-menu.active::before{
+    transform: translateY(0) rotate(-225deg);
+    box-shadow: 0 0px 0 #26aba3;
+}
+.toggle-menu::after{
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 25px;
+    background-color: #26aba3;
+    transform: translateY(10px);
+    transition: all 0.5s;
+}
+.toggle-menu.active::after{
+    transform: translateY(0) rotate(45deg);
+}
+header .menu.responsive {
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  background-color: #26aba3;
+  height: 400px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 2;
+}
+}
+
+@media (max-width:499px) {
+  header .menu {
+    width: 100%;
+  }
+  header .menu.responsive {
+    width: 100%;
+  }
+}
+
+
+/* Conseils */
+#conseils {
+  min-height: 80vh;
+  width: 100%;
+  position: relative;
+}
+
+#conseils img {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+}
+
+#conseils button {
+  padding: 10px 0px;
+  width: 225px;
+  border: none;
+  color: white;
+  background-color: #26aba3;
+  border-radius: 30px;
+}
+
+#conseils button:hover {
+  background-color: #e7ac52;
+}
+
+@media (max-width:499px) {
+  #conseils img {
+    width: 265px;
+    height: 265px;
+  }
+  #conseils button {
+    padding: 10px 0px;
+  }
+}
+
+
+/* Diplomes */
+
+#diplomes {
+  position: relative;
+  background-color: #26aba3;
+}
+
+#diplomes h2 {
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.slide-track {
+  display: inline-block;
+  animation: move 80s linear infinite;
+  white-space: nowrap;
+}
+
+.slide img {
+  width: 250px;
+  height: 200px;
+  border: 3px solid #e7ac52;
+}
+
+.slide-track:hover {
+  animation-play-state: paused;
+}
+.slide img:hover {
+  transform: scale(1.2);
+}
+
+.slide-track > * {
+  padding: 2vw;
+  display: inline-block;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
