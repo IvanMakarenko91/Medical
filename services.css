@@ -209,22 +209,21 @@ header .menu.responsive {
 }
 
 
-/* Main */
+/* main */
+
 main {
-  min-height: 80vh;
-  width: 100%;
-  position: relative;
+  min-height: 100vh;
 }
 
-main img {
-  height: 400px;
-  width: 400px;
-  border-radius: 50%;
-  border: 20px solid rgb(211, 151, 23);
+main .info {
+  width: 250px;
+  height: 250px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 15px;
 }
 
 main button {
-  padding: 10px 60px;
+  padding: 10px 0px;
   width: 225px;
   border: none;
   color: white;
@@ -236,22 +235,25 @@ main button:hover {
   background-color: #e7ac52;
 }
 
-@media (max-width:499px) {
-  main img {
-    width: 265px;
-    height: 265px;
-  }
-  main button {
-    padding: 10px 0px;
-  }
+main button a {
+  text-decoration: none;
+  color: white;
+}
+
+main button a:hover {
+  color: white;
 }
 
 
 /* Offres */
 
-#offres {
+#avis {
   position: relative;
   background-color: #7fd1cc;
+}
+
+.avis-clients {
+  max-width: 1300px;
 }
 
 .info-offres {
@@ -287,49 +289,13 @@ main button:hover {
   }
 }
 
-/* Conseils */
-#conseils {
-  min-height: 80vh;
-  width: 100%;
-  position: relative;
-}
-
-#conseils img {
-  height: 400px;
-  width: 400px;
-  border-radius: 50%;
-}
-
-#conseils button {
-  padding: 10px 0px;
-  width: 225px;
-  border: none;
-  color: white;
-  background-color: #26aba3;
-  border-radius: 30px;
-}
-
-#conseils button:hover {
-  background-color: #e7ac52;
-}
-
-@media (max-width:499px) {
-  #conseils img {
-    width: 265px;
-    height: 265px;
-  }
-  #conseils button {
-    padding: 10px 0px;
-  }
-}
-
 
 /* Tarifs */
 
 #tarifs {
   min-height: 60vh;
   position: relative;
-  background-color: #7fd1cc;
+  background-color: rgb(127 209 204 / 50%);
 }
 
 .choix {
@@ -394,155 +360,6 @@ main button:hover {
   display: flex;
   justify-content: center;
 } 
-
-
-/* Avis */
-#avis {
-  position: relative;
-  background-color: #7fd1cc;
-}
-
-.avis-clients {
-  max-width: 1300px;
-}
-
-@media (max-width:499px) {
-  .info-offres {
-    width: 90%;
-    height: 100%;
-  }
-}
-
-
-/* Question */
-#questions {
-  width: 700px;
-  height: 600px;
-  background-color: #1692ab;
-  margin: 100px auto;
-  display: flex;
-  flex-direction: column;
-}
-.bloc {
-  height: 70px;
-  margin: 5px 5px 0px 5px;
-  background-color: white;
-  flex-grow: 1;
-  transition: 0.4s ease-out;
-  position: relative;
-  overflow: hidden;
-}
-.bloc:last-child {
-  margin-bottom: 5px;
-}
-.activer {
-  flex-grow: 10000;
-}
-.bloc * {
-  pointer-events: none;
-}
-.bloc-haut {
-  min-height: 70px;
-  background: #1692ab29;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 50px;
-}
-.rond img {
-  margin-left: 20px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-.titre-question {
-  margin: 10px 25px;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-}
-.number-question {
-  font-family: 'Roboto', sans-serif;
-  font-size: 22px;
-  margin: 0 18px 0 10px;
-  font-weight: bold;
-}
-.contenu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.contenu p{
-  width: 90%;
-}
-.infos  {
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.infos p {
-  line-height: 140%;
-}
-.infos button{
-  padding: 10px 0px;
-  width: 225px;
-  border: none;
-  color: white;
-  background-color: #26aba3;
-  border-radius: 30px;
-  pointer-events: auto!important;
-}
-.infos button:hover {
-  background-color: #e7ac52;
-}
-.infos button:activer {
-  transform: scale(0.95);
-}
-
-@media (max-width:993px) {
-  #questions {
-    width: 95%;
-  }
-}
-
-@media (max-width:769px) {
-  .titre-question {
-    font-size: 15px;
-  }
-  #questions {
-    margin: 50px auto;
-  }
-}
-
-@media (max-width:499px) {
-  #questions button {
-    display: none;
-  }
-  .bloc {
-    height: 90px;
-  }
-  .bloc-haut {
-    height: 90px;
-    margin-bottom: 20px;
-  }
-  .rond {
-    display: none;
-  }
-  .infos p {
-    font-size: 14px;
-  }
-}
-
-@media (max-width:350px) {
-  .titre-question {
-    font-size: 13px;
-  }
-  #questions {
-    height: 630px;
-  }
-}
 
 
 /* Footer */
