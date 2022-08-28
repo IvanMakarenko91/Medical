@@ -64,6 +64,57 @@
     </main>
 
   </div>  
+
+
+  <section class="container-fluid" id="contactez">
+    <div class="row">
+      <h2 class="text-center bebas my-5">Réservation</h2>
+    </div>
+    <div class="row test justify-content-center">
+      <div class="col-12 col-lg-6 p-0 centrer mb-5">
+        <img alt="" src="./images/accueil/profil.jpg">
+      </div>
+      <div class="col-12 col-lg-6 p-0 centrer mb-5">
+        <div class="formulaire">
+          <h2 class="text-center mb-3 bebas">Je suis la pour vous aider</h2>
+          <form id="formulaire">
+            <div class="centrer">
+              <input type="text" id="fname" name="firstname" placeholder="Prénom *" class="me-2">
+              <div class="invalid-feedback">
+                Veuillez saisir votre nom et prénom.
+              </div>
+
+              <input type="text" id="lastname" name="lastname" placeholder="Nom *" class="ms-2">
+              <div class="invalid-feedback">
+                Veuillez saisir votre nom et prénom.
+              </div>
+            </div>
+
+            <input id="emailAddress" type="email" name="email" placeholder="Votre email *">
+            <div class="invalid-feedback ms-3">
+              Veuillez saisir un mail correcte.
+            </div>
+
+            <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Numéro de télephone *">
+            <div class="invalid-feedback">
+                Veuillez saisir votre numéro de téléphone.
+            </div>
+
+            <div class="select my-2">
+              <select name="format" id="format" class="required">
+                 <option selected disabled>Motif</option>
+                 <option value="therapie">Thérapie de couple</option>
+                 <option value="depressions">Dépressions</option>
+                 <option value="relations">Relations</option>
+              </select>
+            </div>
+        
+            <input type="submit" value="Envoyer">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
   
 
 
@@ -108,5 +159,6 @@
    </footer>
 
   <script src="./contact.js"></script>
+  <script src="./formulaire.js"></script>
 </body>
 </html>

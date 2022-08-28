@@ -244,6 +244,11 @@ iframe {
   border-radius: 10px;
 }
 
+.test {
+  max-width: 1200px;
+  margin: auto;
+}
+
 @media (max-width:399px) {
   iframe {
     width: 90%;
@@ -251,6 +256,105 @@ iframe {
   }
 }
 
+
+/* Contactez */
+
+#contactez {
+  background-color: #26aba3;
+}
+
+#contactez img {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+}
+
+.formulaire {
+  border: 1px solid black;
+  box-sizing : border-box;
+  border-radius:5px;
+  background-color:#f2f2f2;
+  padding:20px;
+  width: 100%;
+  max-width: 440px;
+  margin:0 auto;
+}
+
+input[type=text], textarea, input[type=email] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #26aba3;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #e7ac52;
+}
+
+select {
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  -ms-appearance:none;
+  appearance:none;
+  outline:0;
+  box-shadow:none;
+  border:0!important;
+  background-image: none;
+  flex: 1;
+  padding: 0 .5em;
+  cursor:pointer;
+  font-size: 1em;
+}
+select::-ms-expand {
+  display: none;
+}
+.select {
+  position: relative;
+  display: flex;
+  width: 100%;
+  line-height: 3;
+  overflow: hidden;
+  border-radius: .25em;
+  border: 1px solid #ccc;
+}
+.select::after {
+  content: '\263F';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  cursor:pointer;
+  pointer-events:none;
+  transition:.25s all ease;
+}
+.select:hover::after {
+  color: #26aba3;
+}
+
+@media (max-width:499px) {
+  #contactez img {
+    width: 265px;
+    height: 265px;
+  }
+  .formulaire {
+    width: 95%;
+  }
+}
 
 /* Footer */
 footer {
