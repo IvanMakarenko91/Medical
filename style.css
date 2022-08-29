@@ -43,12 +43,12 @@ position: relative;
   font-family: 'Roboto', sans-serif;
 }
 
-.bebas {
-  font-family: 'Bebas Neue', cursive;
-}
-
 #principale {
   background: linear-gradient(180deg, #bbe2e0,5%, rgb(255, 255, 255));
+}
+
+h1,h2,h3,h4,h5,h6, .choix p {
+  font-family: 'Bebas Neue', cursive;
 }
 
 /* Navbar */
@@ -72,7 +72,6 @@ margin-right: 5px;
 header h1 {
 display: flex;
 align-items: center;
-font-family: 'Bebas Neue', cursive;
 }
 header .menu {
   display: flex;
@@ -119,6 +118,10 @@ header .menu li a::after {
 }
 header .menu li a:hover::before, header .menu li a:hover::after {
   opacity: 1;
+}
+
+header .menu li:nth-child(1) a {
+  color: #e7ac52;
 }
 
 /* Responsive Navbar */
@@ -216,33 +219,71 @@ main {
   position: relative;
 }
 
+main h2 {
+  font-size: 3rem;
+}
+
 main img {
   height: 400px;
   width: 400px;
-  border-radius: 50%;
-  border: 20px solid rgb(211, 151, 23);
+  box-shadow: 5px 10px 10px 2px black;
 }
 
 main button {
-  padding: 10px 60px;
+  border: none;
+  background-color: #26aba3;
   width: 225px;
+  padding: 10px 0px;
+  border-radius: 30px;
+}
+
+main button a {
   border: none;
   color: white;
-  background-color: #26aba3;
-  border-radius: 30px;
+  text-decoration: none;
 }
 
 main button:hover {
   background-color: #e7ac52;
 }
 
+main button:hover a {
+  color: black;
+}
+
+.consulter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.qualite {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.satisfaction {
+  width: 200px;
+  text-align: center;
+}
+
+.num  {
+  font-family: 'Bebas Neue', cursive;
+  color: #e7ac52;
+  margin-bottom: 0;
+}
+
+.exp {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.3rem;
+}
+
 @media (max-width:499px) {
   main img {
     width: 265px;
     height: 265px;
-  }
-  main button {
-    padding: 10px 0px;
   }
 }
 
@@ -259,31 +300,46 @@ main button:hover {
   height: 300px;
   background-color: white;
   border-radius: 15px;
+  position: relative;
+}
+
+.apostrophe {
+  position: absolute;
+  right: 10%;
+  top: 10%;
 }
 
 .info-offres img {
   height: 50px;
   width: 50px;
-  border-radius: 50%;
 }
 
 #offres button {
-  padding: 10px 0px;
-  width: 225px;
+  border: none;
+  background-color: transparent;
+}
+
+#offres button a {
+  padding: 10px 60px;
   border: none;
   color: white;
   background-color: #26aba3;
   border-radius: 30px;
+  text-decoration: none;
 }
 
-#offres button:hover {
+#offres button:hover a {
   background-color: #e7ac52;
+  color: black;
 }
 
 @media (max-width:499px) {
   .info-offres {
     width: 90%;
     height: 100%;
+  }
+  #offres button a {
+    padding: 10px 30px;
   }
 }
 
@@ -297,20 +353,27 @@ main button:hover {
 #conseils img {
   height: 400px;
   width: 400px;
-  border-radius: 50%;
+  box-shadow: -5px 10px 10px 2px black;
 }
 
 #conseils button {
-  padding: 10px 0px;
+  border: none;
+  background-color: transparent;
+}
+
+#conseils button a {
+  padding: 10px 60px;
   width: 225px;
   border: none;
   color: white;
   background-color: #26aba3;
   border-radius: 30px;
+  text-decoration: none;
 }
 
-#conseils button:hover {
+#conseils button:hover a {
   background-color: #e7ac52;
+  color: black;
 }
 
 @media (max-width:499px) {
@@ -318,8 +381,8 @@ main button:hover {
     width: 265px;
     height: 265px;
   }
-  #conseils button {
-    padding: 10px 0px;
+  #conseils button a {
+    padding: 10px 30px;
   }
 }
 
@@ -363,7 +426,6 @@ main button:hover {
 
 .choix h3 {
   font-size: 30px;
-  font-family: 'Bebas Neue', cursive;
   font-weight: 600;
 }
 
@@ -388,6 +450,10 @@ main button:hover {
 
 #tarifs button:hover {
   background-color: #e7ac52;
+}
+
+#tarifs button:hover a {
+  color: black;
 }
 
 #tarifs .centrer-row {
@@ -494,8 +560,16 @@ main button:hover {
   border-radius: 30px;
   pointer-events: auto!important;
 }
+.infos button a {
+  text-decoration: none;
+  color: white;
+}
 .infos button:hover {
   background-color: #e7ac52;
+}
+
+.infos button:hover a {
+  color: black;
 }
 .infos button:activer {
   transform: scale(0.95);
@@ -544,6 +618,10 @@ main button:hover {
   }
 }
 
+#offres h2, #conseils h2, #tarifs h2, #avis h2, .quest {
+  font-size: 2.5rem;
+}
+
 
 /* Footer */
 footer {
@@ -552,7 +630,6 @@ footer {
   text-align: center;
 }
 footer h2 {
-  font-family: 'Bebas Neue', cursive;
   color: #1692ab;
 }
 footer p {
@@ -587,9 +664,6 @@ footer ul {
   display: flex;
   justify-content: center;
 }
-footer ul li {
-  color: #000000;
-}
 footer ul li a{
   margin: 0px 10px;
   padding: 5px 10px;
@@ -597,12 +671,13 @@ footer ul li a{
   font-family: 'Bebas Neue', cursive;
   font-size: 25px;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
-footer ul li:hover {
+footer ul li:hover a {
   color: #e7ac52;
-}
-footer ul li a:hover {
   background-color: #1692ab;
+  transition: 0s;
 }
 
 footer .copyright {

@@ -43,12 +43,12 @@ position: relative;
   font-family: 'Roboto', sans-serif;
 }
 
-.bebas {
-  font-family: 'Bebas Neue', cursive;
-}
-
 #principale {
   background: linear-gradient(180deg, #bbe2e0,5%, rgb(255, 255, 255));
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Bebas Neue', cursive;
 }
 
 /* Navbar */
@@ -72,7 +72,6 @@ margin-right: 5px;
 header h1 {
 display: flex;
 align-items: center;
-font-family: 'Bebas Neue', cursive;
 }
 header .menu {
   display: flex;
@@ -119,6 +118,10 @@ header .menu li a::after {
 }
 header .menu li a:hover::before, header .menu li a:hover::after {
   opacity: 1;
+}
+
+header .menu li:nth-child(4) a {
+  color: #e7ac52;
 }
 
 /* Responsive Navbar */
@@ -229,10 +232,6 @@ main .info {
   max-width: 768px;
 }
 
-.lieu h3 {
-  font-family: 'Bebas Neue', cursive;
-}
-
 main img {
   width: 50px;
   height: 50px;
@@ -304,6 +303,7 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background-color: #e7ac52;
+  color: black;
 }
 
 select {
@@ -356,6 +356,10 @@ select::-ms-expand {
   }
 }
 
+#contactez h2 {
+  font-size: 2.5rem;
+}
+
 /* Footer */
 footer {
   min-height: 30vh;
@@ -363,7 +367,6 @@ footer {
   text-align: center;
 }
 footer h2 {
-  font-family: 'Bebas Neue', cursive;
   color: #1692ab;
 }
 footer p {
@@ -408,12 +411,13 @@ footer ul li a{
   font-family: 'Bebas Neue', cursive;
   font-size: 25px;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
-footer ul li:hover {
+footer ul li:hover a {
   color: #e7ac52;
-}
-footer ul li a:hover {
   background-color: #1692ab;
+  transition: 0s;
 }
 
 footer .copyright {
